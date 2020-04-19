@@ -1,0 +1,23 @@
+from pystray import MenuItem as item
+import pystray
+import tkinter
+from PIL import Image
+
+
+def on_openApp():
+    pass
+
+def on_quit( icon, item):
+    pass
+def on_action():
+    pass
+def setup(self, icon):
+    self.icon.visible = True
+
+
+image = Image.open('icons/icon-small.png')
+menu = (item('Show', on_openApp),
+        item('Hide',on_action),
+        item('Quit', on_quit))
+icon = pystray.Icon('test icons', image, 'AI Camera', menu)
+icon.run()
